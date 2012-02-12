@@ -45,10 +45,12 @@ def initOptions(parser):
     parser.add_option('-n', '--level', dest='level', default=6,
                       type='int',
                       help=('determines the length of one side of the square by '
-                            '2^LEVEL. default=%default'))
+                            '2^LEVEL. There is a restriction that LEVEL <= 8. Using large level '
+                            'values can take a long time or create enormous / resource '
+                            'intensive plots. default=%default'))
     parser.add_option('--override', dest='override', default=False,
                       action='store_true',
-                      help=('overrides the provision on --level <= 10. Using large level '
+                      help=('overrides the restrition for --level > 8. Using large level '
                             'values can take a long time or create enormous / resource '
                             'intensive plots. default=%default'))
     parser.add_option('--normalize', dest='normalize', default=False,
@@ -85,8 +87,8 @@ def checkOptions(options, args, parser):
     options.max = 0
     if options.level < 1:
         parser.error('--level must by greater than 0')
-    if options.level > 10 and not options.override:
-        parser.error('--level > 10 and --override not engaged. (2^%d)^2 is a big number.' 
+    if options.level > 8 and not options.override:
+        parser.error('--level > 8 and --override not engaged. (2^%d)^2 is a big number.' 
                      % options.level)
     if options.cmap not in colorMaps:
         parser.error('--cmap %s not a valid option. Pick from %s' 

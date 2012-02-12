@@ -26,8 +26,10 @@
     Options:
       -h, --help            show this help message and exit
       -n LEVEL, --level=LEVEL
-                            determines the length of one side of the square by 2^LEVEL. default=6
-      --override            overrides the provision on --level <= 10. Using large level values can take
+                            determines the length of one side of the square by 2^LEVEL. There is a
+                            restriction that LEVEL <= 8. Using large level values can take a long time
+                            or create enormous / resource intensive plots. default=6
+      --override            overrides the restrition for --level > 8. Using large level values can take
                             a long time or create enormous / resource intensive plots. default=False
       --normalize           subtracts off the mean and divides by the std dev. default=False
       --cmap=CMAP           The colormap to be used. default=binary Possible values: Spectral, summer,
