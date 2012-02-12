@@ -39,6 +39,8 @@ from optparse import OptionParser
 import os
 import sys
 
+colorMaps = [m for m in plt.cm.datad if not m.endswith("_r")]
+
 def initOptions(parser):
     parser.add_option('-n', '--level', dest='level', default=6,
                       type='int',
@@ -53,6 +55,9 @@ def initOptions(parser):
                       action='store_true',
                       help=('subtracts off the mean and divides by the std dev.'
                             'default=%default'))
+    parser.add_option('--cmap', dest='cmap', default='binary',
+                      help=('The colormap to be used. default=%default Possible values:'
+                            + '%s' % ', '.join(colorMaps)))
     parser.add_option('--demo', dest='demo', default=False,
                       action='store_true',
                       help=('creates a demonstration image based on the --level parameter. '
@@ -76,6 +81,9 @@ def checkOptions(options, args, parser):
     if options.level > 10 and not options.override:
         parser.error('--level > 10 and --override not engaged. (2^%d)^2 is a big number.' 
                      % options.level)
+    if options.cmap not in colorMaps:
+        parser.error('--cmap %s not a valid option. Pick from %s' 
+                     % (options.cmap, ', '.join(colorMaps)))
     if len(args) > 0:
         for a in args:
             if not os.path.exists(a):
@@ -162,7 +170,7 @@ def processFile(filename, options):
     return m
 
 def drawData(ax, data, options):
-    plt.matshow(data, fignum=False, origin='upper', cmap=plt.cm.binary)
+    plt.matshow(data, fignum=False, origin='upper', cmap=plt.get_cmap(options.cmap))
     ax.set_xticks([])
     ax.set_yticks([])
     

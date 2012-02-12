@@ -30,6 +30,14 @@
       --override            overrides the provision on --level <= 10. Using large level values can take
                             a long time or create enormous / resource intensive plots. default=False
       --normalize           subtracts off the mean and divides by the std dev.default=False
+      --cmap=CMAP           The colormap to be used. default=binary Possible values: Spectral, summer,
+                            coolwarm, Set1, Set2, Set3, Dark2, hot, RdPu, YlGnBu, RdYlBu, gist_stern,
+                            cool, gray, GnBu, gist_ncar, gist_rainbow, bone, RdYlGn, spring, terrain,
+                            PuBu, spectral, gist_yarg, BuGn, bwr, cubehelix, YlOrRd, Greens, PRGn,
+                            gist_heat, Paired, hsv, Pastel2, Pastel1, BuPu, copper, OrRd, brg, gnuplot2,
+                            jet, gist_earth, Oranges, PiYG, YlGn, Accent, gist_gray, flag, BrBG, Reds,
+                            RdGy, PuRd, Blues, Greys, autumn, pink, binary, winter, gnuplot, RdBu,
+                            prism, YlOrBr, rainbow, seismic, Purples, ocean, PuOr, PuBuGn, afmhot
       --demo                creates a demonstration image based on the --level parameter. default=False
       --dpi=DPI             dots per inch of raster outputs, i.e. if --outFormat is all or png.
                             default=300
@@ -57,5 +65,8 @@
     bin/simpleHilbertCurve.py --level 4 --outFormat png --out example2 examples/stocksFord.txt --normalize
 ![Example image](https://github.com/dentearl/simpleHilbertCurve/raw/master/examples/example2.png)
 
-    bin/simpleHilbertCurve.py --level 4 --outFormat png --out example3 --demo --normalize
+    bin/simpleHilbertCurve.py --level 4 --outFormat png --out example3 --demo
 ![Example image](https://github.com/dentearl/simpleHilbertCurve/raw/master/examples/example3.png)
+
+    bin/simpleHilbertCurve.py --level 5 --outFormat png --out example4 --demo -cmap jet
+![Example image](https://github.com/dentearl/simpleHilbertCurve/raw/master/examples/example4.png)
