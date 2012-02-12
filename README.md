@@ -43,10 +43,10 @@
     bin/simpleHilbertCurve.py --level 1 --outFormat png --out example0.1
 ![Example image](https://github.com/dentearl/simpleHilbertCurve/raw/master/examples/example0.1.png)
 
-bin/simpleHilbertCurve.py --level 2 --outFormat png --out example0.2
+    bin/simpleHilbertCurve.py --level 2 --outFormat png --out example0.2
 ![Example image](https://github.com/dentearl/simpleHilbertCurve/raw/master/examples/example0.2.png)
 
-bin/simpleHilbertCurve.py --level 3 --outFormat png --out example0.3
+    bin/simpleHilbertCurve.py --level 3 --outFormat png --out example0.3
 ![Example image](https://github.com/dentearl/simpleHilbertCurve/raw/master/examples/example0.3.png)
 
     bin/simpleHilbertCurve.py --level 5 --outFormat png --out example1
