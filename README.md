@@ -72,5 +72,5 @@
     bin/simpleHilbertCurve.py --level 4 --outFormat png --out example3 --demo
 ![Example image](https://github.com/dentearl/simpleHilbertCurve/raw/master/examples/example3.png)
 
-    bin/simpleHilbertCurve.py --level 5 --outFormat png --out example4 --demo -cmap jet
+    bin/simpleHilbertCurve.py --level 5 --outFormat png --out example4 --demo --cmap jet
 ![Example image](https://github.com/dentearl/simpleHilbertCurve/raw/master/examples/example4.png)
