@@ -53,7 +53,7 @@ def initOptions(parser):
                             'intensive plots. default=%default'))
     parser.add_option('--normalize', dest='normalize', default=False,
                       action='store_true',
-                      help=('subtracts off the mean and divides by the std dev.'
+                      help=('subtracts off the mean and divides by the std dev. '
                             'default=%default'))
     parser.add_option('--cmap', dest='cmap', default='binary',
                       help=('The colormap to be used. default=%default Possible values:'

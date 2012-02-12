@@ -29,7 +29,7 @@
                             determines the length of one side of the square by 2^n. default=6
       --override            overrides the provision on --level <= 10. Using large level values can take
                             a long time or create enormous / resource intensive plots. default=False
-      --normalize           subtracts off the mean and divides by the std dev.default=False
+      --normalize           subtracts off the mean and divides by the std dev. default=False
       --cmap=CMAP           The colormap to be used. default=binary Possible values: Spectral, summer,
                             coolwarm, Set1, Set2, Set3, Dark2, hot, RdPu, YlGnBu, RdYlBu, gist_stern,
                             cool, gray, GnBu, gist_ncar, gist_rainbow, bone, RdYlGn, spring, terrain,
