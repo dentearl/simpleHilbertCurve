@@ -45,7 +45,7 @@ def initOptions(parser):
     parser.add_option('-n', '--level', dest='level', default=6,
                       type='int',
                       help=('determines the length of one side of the square by '
-                            '2^n. default=%default'))
+                            '2^LEVEL. default=%default'))
     parser.add_option('--override', dest='override', default=False,
                       action='store_true',
                       help=('overrides the provision on --level <= 10. Using large level '
