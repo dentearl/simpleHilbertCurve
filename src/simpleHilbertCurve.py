@@ -40,8 +40,6 @@ import os
 import sys
 
 def initOptions(parser):
-    parser.add_option('--max', dest='max', type='float',
-                      help=('the maximum length of the linear scale.'))
     parser.add_option('-n', '--level', dest='level', default=6,
                       type='int',
                       help=('determines the length of one side of the square by '
@@ -72,6 +70,7 @@ def initOptions(parser):
                             'extension needed. default=%default'))
 
 def checkOptions(options, args, parser):
+    options.max = 0
     if options.level < 1:
         parser.error('--level must by greater than 0')
     if options.level > 10 and not options.override:
