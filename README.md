@@ -39,6 +39,21 @@
       --out=OUT             path/filename where figure will be created. No extension needed.
                             default=myPlot
 
-##Example
-![Example image]()
+##Examples
+    bin/simpleHilbertCurve.py --level 1 --outFormat png --out example0.1
+![Example image](https://github.com/dentearl/simpleHilbertCurve/raw/master/examples/example0.1.png)
 
+bin/simpleHilbertCurve.py --level 2 --outFormat png --out example0.2
+![Example image](https://github.com/dentearl/simpleHilbertCurve/raw/master/examples/example0.2.png)
+
+bin/simpleHilbertCurve.py --level 3 --outFormat png --out example0.3
+![Example image](https://github.com/dentearl/simpleHilbertCurve/raw/master/examples/example0.3.png)
+
+    bin/simpleHilbertCurve.py --level 5 --outFormat png --out example1
+![Example image](https://github.com/dentearl/simpleHilbertCurve/raw/master/examples/example1.png)
+    
+    bin/simpleHilbertCurve.py --level 4 --outFormat png --out example2 examples/stocksFord.txt --normalize
+![Example image](https://github.com/dentearl/simpleHilbertCurve/raw/master/examples/example2.png)
+
+    bin/simpleHilbertCurve.py --level 4 --outFormat png --out example3 --demo --normalize
+![Example image](https://github.com/dentearl/simpleHilbertCurve/raw/master/examples/example3.png)
