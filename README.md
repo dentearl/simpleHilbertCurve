@@ -15,7 +15,7 @@
 3. Type <code>make</code>.
     
 ##Usage
-    Usage: simpleHilbertCurve.py --max=MAX --level=LEVEL [options] inputFile
+    Usage: simpleHilbertCurve.py --level=LEVEL [options] inputFile
 
     simpleHilbertCurve.py takes a two column input, col1 is a position long a
     scale with values in [0, MAX] and col2 is a value in (-inf, inf).
@@ -25,7 +25,6 @@
 
     Options:
       -h, --help            show this help message and exit
-      --max=MAX             the maximum length of the linear scale.
       -n LEVEL, --level=LEVEL
                             determines the length of one side of the square by 2^n. default=6
       --override            overrides the provision on --level <= 10. Using large level values can take
@@ -48,6 +47,9 @@
 
     bin/simpleHilbertCurve.py --level 3 --outFormat png --out example0.3
 ![Example image](https://github.com/dentearl/simpleHilbertCurve/raw/master/examples/example0.3.png)
+
+    bin/simpleHilbertCurve.py --level 4 --outFormat png --out example0.4
+![Example image](https://github.com/dentearl/simpleHilbertCurve/raw/master/examples/example0.4.png)
 
     bin/simpleHilbertCurve.py --level 5 --outFormat png --out example1
 ![Example image](https://github.com/dentearl/simpleHilbertCurve/raw/master/examples/example1.png)
