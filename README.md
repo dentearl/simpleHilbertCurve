@@ -39,6 +39,10 @@
                             RdGy, PuRd, Blues, Greys, autumn, pink, binary, winter, gnuplot, RdBu,
                             prism, YlOrBr, rainbow, seismic, Purples, ocean, PuOr, PuBuGn, afmhot
       --demo                creates a demonstration image based on the --level parameter. default=False
+      --matshow             switches the drawing call from pcolor() to matshow(). matshow() produces
+                            rasters whereas pcolor() can produce vectors. For pdf or eps output pcolor()
+                            looks much crisper but at very large --level values the image can take a
+                            long time to draw on screen. default=False
       --dpi=DPI             dots per inch of raster outputs, i.e. if --outFormat is all or png.
                             default=300
       --outFormat=OUTFORMAT

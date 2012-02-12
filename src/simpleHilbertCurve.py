@@ -62,6 +62,13 @@ def initOptions(parser):
                       action='store_true',
                       help=('creates a demonstration image based on the --level parameter. '
                             'default=%default'))
+    parser.add_option('--matshow', dest='matshow', default=False,
+                      action='store_true',
+                      help=('switches the drawing call from pcolor() to matshow(). matshow() '
+                            'produces rasters whereas pcolor() can produce vectors. For pdf '
+                            'or eps output pcolor() looks much crisper but at very large --level '
+                            'values the image can take a long time to draw on screen. '
+                            'default=%default'))
     parser.add_option('--dpi', dest='dpi', default=300,
                       type='int',
                       help='dots per inch of raster outputs, i.e. if --outFormat is all '
@@ -170,7 +177,11 @@ def processFile(filename, options):
     return m
 
 def drawData(ax, data, options):
-    plt.matshow(data, fignum=False, origin='upper', cmap=plt.get_cmap(options.cmap))
+    if options.matshow:
+        plt.matshow(data, fignum=False, origin='upper', cmap=plt.get_cmap(options.cmap))
+    else:
+        data = data[ ::-1,:] # reverse row order
+        plt.pcolor(data, cmap=plt.get_cmap(options.cmap))
     ax.set_xticks([])
     ax.set_yticks([])
     
