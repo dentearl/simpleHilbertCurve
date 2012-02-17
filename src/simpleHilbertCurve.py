@@ -3,7 +3,13 @@
 simpleHilbertCurve
 dent earl, dent.earl (a) gmail dot com
 
-**simpleHilbertCurve** is a Python script that uses matplotlib to create [Hilbert curve](http://en.wikipedia.org/wiki/Hilbert_curve) plots. Hilbert curves are space filling fractals that can be used to map a one dimensional set into two dimensions. Hilbert curves mostly maintain locality meaning that clusters in the 2D representation are most likely close together in the 1D scale too. Hilbert curves can be a useful way of visualy summarizing and comparing large time series or large linear maps (like genomic data).
+**simpleHilbertCurve** is a Python script that uses matplotlib to create 
+[Hilbert curve](http://en.wikipedia.org/wiki/Hilbert_curve) plots. Hilbert 
+curves are space filling fractals that can be used to map a one dimensional 
+set into two dimensions. Hilbert curves mostly maintain locality meaning 
+that clusters in the 2D representation are most likely close together in 
+the 1D scale too. Hilbert curves can be a useful way of visualy summarizing 
+and comparing large time series or large linear maps (like genomic data).
 
 """
 ##############################
