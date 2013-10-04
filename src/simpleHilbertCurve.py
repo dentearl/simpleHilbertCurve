@@ -125,7 +125,7 @@ def initImage(width, height, options):
     return (fig, pdf)
 
 def establishAxis(fig, options):
-    """ create one axes per chromosome
+    """ create axis
     """
     options.axLeft = 0.05
     options.axWidth = 0.9
